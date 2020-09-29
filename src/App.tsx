@@ -1,25 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/header/Header';
+import Footer from './components/footer/Footer';
+import Home from './components/home/Home';
+
+import styled from 'styled-components';
+
+const MainContentStyle=styled.main`
+background: #d0d0d0;
+padding:2rem;
+display:flex;
+justify-content:center;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Header/>
+    <MainContentStyle>
+      <Home/>   
+    </MainContentStyle>
+    <Footer/>
+    </>
   );
 }
 
